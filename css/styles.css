@@ -188,6 +188,15 @@ letter-spacing: 1px;}
     justify-content: space-evenly;
     object-fit: cover;
   }
+  li{
+    font-size: 1rem !important;
+  }
+  .col h2{
+    font-size: 1.3rem !important;
+  }
+  a h4{
+    font-size: 1.2rem;
+  }
 
   .big-heading {
     font-size: 3.5rem !important;
