@@ -1,0 +1,823 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: hindi;
+  src: url("D:\\HPE Competition\\Medical Website\\AMS Aakul 5.ttf");
+}
+ @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap'); 
+/* FadeinUp Animation */
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+}
+
+.animatedFadeInUp {
+  opacity: 0;
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
+
+/* Fadein Animation */
+
+.fade-in {
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4F2B74;
+}
+
+body {
+  font-family: "Poppins";
+  text-align: center;
+  overflow-x: hidden;
+}
+
+a {
+  padding: 0;
+  margin: 0;
+  text-decoration: 0;
+}
+
+h1,
+s h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins";
+}
+
+p {
+  color: #8f8f8f;
+}
+
+hr {
+  width: 50%;
+  margin-left: 25% !important;
+  margin-right: 25% !important;
+  height: 2px !important;
+  background-color: #000000a2;
+  opacity: 0.8;
+}
+
+/* Navbar */
+.navbar {
+  padding: 20px;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  color: black !important;
+}
+.navbar .active {
+  border-bottom: 6px #582E74 solid;
+
+}
+
+.navbar li {
+  font-size: larger;
+  color: black;
+}
+
+.bg-dark {
+  background-color: #ffffff !important;
+}
+
+.nav-link{
+  color: rgb(0, 0, 0) !important;
+  font-size: 20px;
+  font-weight: 400;
+letter-spacing: 1px;}
+
+.navbar ul {
+  height: auto;
+}
+.navbar-toggler{
+  color: black;
+}
+
+/* ************ */
+
+/* *****responsive tags */
+@media only screen and (max-width: 600px) {
+  .coverpage {
+    display: flex;
+    min-height: 170vw !important;
+    flex-direction: column;
+    justify-content: space-evenly;
+    object-fit: cover;
+  }
+
+  .big-heading {
+    font-size: 3.5rem !important;
+    margin: 20px;
+    font-family: 'Oswald', sans-serif !important;
+    letter-spacing:100px;
+  }
+  .container1 h2 {
+    font-size: 1.5rem !important;
+  }
+  .container1 .btn {
+    font-size: 1rem !important;
+    margin: 10px !important;
+  }
+
+  .section-heading {
+    font-size: 2rem !important;
+    font-weight: 500;
+  }
+  .card-headings h2 {
+    font-size: 1.5rem !important;
+  }
+  .coverpage .flex-container {
+    text-align: center;
+  }
+  .inner-text {
+    font-size: 1rem !important;
+  }
+  .card-img {
+    min-width: 100px !important;
+    max-width: 150px !important;
+  }
+  .sick-card-title {
+    font-size: 2rem !important;
+  }
+  .sick-card-body {
+    line-height: 1.2;
+    margin-bottom: 15px;
+    font-size: 1rem !important;
+  }
+  #quiz-redirect {
+    margin: 20px !important;
+  }
+  .sick-btn {
+    font-size: 1rem !important;
+  }
+  .py-3 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .coverpage {
+    display: flex;
+    min-height: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    object-fit: cover;
+  }
+
+  .big-heading {
+    font-size: 4rem !important;
+    margin: 10px;
+  }
+  .container1 h2 {
+    font-size: 1.5rem !important;
+    margin-bottom: 20px;
+  }
+  .container1 .btn {
+    font-size: 1rem !important;
+    margin: 10px !important;
+  }
+
+  .section-heading {
+    font-size: 2rem !important;
+    font-weight: 500;
+  }
+  .card-headings h2 {
+    font-size: 1.5rem !important;
+  }
+  .coverpage .flex-container {
+    text-align: center;
+  }
+  .inner-text {
+    font-size: 1rem !important;
+  }
+  #sick-card-img {
+    max-width: 150px !important;
+  }
+  .sick-card-title {
+    font-size: 2rem !important;
+  }
+  .sick-card-body {
+    line-height: 1.2;
+    margin-bottom: 15px;
+    font-size: 1rem !important;
+  }
+  #quiz-redirect {
+    margin: 20px !important;
+  }
+  .sick-btn {
+    font-size: 1rem !important;
+  }
+}
+
+/* Back to Top Btn */
+#button {
+  display: inline-block;
+  background-color: #4F2B74;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media only screen and (max-width: 1024px) {
+  .section-heading {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .card-headings {
+    font-size: 1.6rem;
+  }
+  .big-heading {
+    font-family: "Poppins";
+    font-size: 3rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .cover-image {
+    display: none;
+  }
+  #cover-img-col {
+    display: none;
+  }
+  .coverpage .flex-container {
+    text-align: center;
+  }
+  .container1 {
+    margin-right: 0 !important;
+  }
+}
+
+/* Headings */
+
+.big-heading {
+  font-family: "poppins";
+  font-size: 11rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: white;
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 800;
+  margin-top: 20px;
+}
+
+/* Containers */
+
+.container-fluid {
+  padding: 9% 10%;
+}
+
+/* Cover Page */
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.coverpage {
+  color: rgb(0, 0, 0);
+  text-align: left;
+  object-fit: cover;
+  height: 100%;
+  background-color:#4F2B74;
+}
+
+.cover-image {
+  position: relative;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  width: 90%;
+  right: -40%;
+  cursor: pointer;
+  transition: 0.4s;
+  margin-top: 30px;
+}
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+/* cover-page buttons */
+
+.flex-container .btn {
+  transition: 0.5s;
+  margin: 5% 3% 5% 0;
+}
+
+.flex-container .discover-button {
+  color: black;
+  transition-duration: 00.4s;
+  border: 2px white solid !important;
+  background-color: white;
+
+}
+
+.flex-container .discover-button:hover {
+  color:#ffffff;
+  top: 5px;
+  left: -5px;
+  background-color: #4F2B74;
+}
+
+.flex-container .btn:hover {
+  transform: scale(0.97);
+}
+
+/* ***************** */
+
+/* services section */
+
+.content-container {
+  padding: 2% 6% 2% 6%;
+  background-color: #ffffff;
+}
+.text-container {
+  padding: 20px;
+}
+
+.services-img {
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 10px 10px 66px -8px rgba(0, 0, 0, 0.281);
+  -webkit-box-shadow: 10px 10px 66px -8px rgba(0, 0, 0, 0.308);
+  -moz-box-shadow: 10px 10px 66px -8px rgba(0, 0, 0, 0.219);
+  cursor: pointer;
+  transition: 0.4s;
+  margin: 5px;
+}
+.services-img:hover {
+  transform: scale(0.98);
+  transform: rotate3d(50, -10, 40, 10deg);
+}
+
+@media only screen and (max-width: 600px) {
+  .services-img {
+    width: 200px;
+    margin: 20px;
+  }
+}
+
+/* COVID-19 Section */
+
+.covid-19-container {
+  align-content: center;
+  text-align: center;
+  margin: 0;
+  background-color: #121526;
+  color: white;
+  padding: 2% 6%;
+}
+
+.covid-19-container hr {
+  background-color: white;
+  margin-bottom: 50px;
+}
+
+.covid-19-container .row {
+  margin: 0;
+}
+
+.covid-19-container h1 {
+  padding: 10px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(150, 150, 150, 1);
+}
+.card-headings {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+  color: #121526;
+
+  margin-bottom: 15px;
+}
+
+.card-headings h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+video {
+  max-width: 100%;
+}
+
+.card {
+  margin: 10px;
+  border: none;
+  transition: 0.4s;
+  cursor: pointer;
+  min-height: 310px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-title {
+  color: black;
+}
+
+/* symptoms row */
+
+.neomorph {
+  margin: 40px 60px 40px 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+
+  border-radius: 20px;
+  background: white;
+  box-shadow: 10px 10px 36px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 36px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 36px -4px rgba(0, 0, 0, 0.75);
+  transition: 00.4s;
+}
+
+.neomorph:hover {
+  transform: scale(0.98);
+  transform: rotate3d(50, -10, 40, 10deg);
+}
+
+.neomorph img {
+  max-width: 300px;
+}
+
+/* QUIZ REDIRECT SECTION */
+#quiz-redirect {
+  margin-top: 50px;
+  margin-left: 15%;
+  margin-right: 15%;
+  background: rgb(18, 21, 38);
+  background: linear-gradient(
+    37deg,
+    rgba(18, 21, 38, 1) 0%,
+    rgba(72, 87, 170, 1) 100%
+  );
+  color: white;
+  border-radius: 20px;
+}
+
+.card-container {
+  box-shadow: 10px 10px 36px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 36px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 36px -4px rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+}
+
+.card-img {
+  max-width: 250px;
+}
+.sick-card-title {
+  margin-bottom: 30px;
+  margin-top: 40px;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.sick-card-body {
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+/* Immunity Section */
+#immunity-section {
+  background: rgb(18, 21, 38);
+  background: linear-gradient(
+    37deg,
+    rgba(18, 21, 38, 1) 0%,
+    rgba(72, 87, 170, 1) 100%
+  );
+  margin-top: 40px;
+  color: white;
+}
+
+.text-container-immun {
+  margin-bottom: 50px;
+}
+
+.immun-headings {
+  text-align: left;
+  margin-bottom: 10px;
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+}
+
+/* Covid-19 Immediate Steps */
+
+.branches {
+  min-height: 100vh;
+  padding: 40px 0;
+  color: 22ee2e;
+  margin-top: 80px;
+}
+
+.branches .branch-items {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.branches .branch-items .item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding: 15px;
+}
+
+.branches .branch-items .item-inner {
+  padding: 30px;
+}
+.branches .branch-items .read-more-cont {
+  display: none;
+}
+.branches .branch-items .item-inner h3 {
+  padding: 20px 0 5px 0;
+  font-size: 30px;
+  color: #2e2e2e;
+  margin-bottom: 30px;
+  position: relative;
+}
+.branches .branch-items .item-inner h3::before {
+  content: "";
+  height: 1px;
+  width: 80px;
+  background-color: #fafafa;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
+
+.branches .branch-items .item-inner p {
+  color: #2e2e2e;
+  font-size: 16px;
+  margin: 0 0 5px;
+  text-align: left;
+}
+.branches .branch-items .item-inner .btn {
+  font-size: 16px;
+  background-color: transparent;
+  border: 1px solid #2e2e2e;
+  color: #2e2e2e;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.branches .branch-items .item-inner .btn:hover {
+  transform: scale(0.98);
+  background-color: rgb(0, 132, 255);
+  border: 1px black solid;
+  color: white;
+}
+
+.branch-img {
+  border-radius: 15px;
+  max-width: 200px;
+  transition: 0.4s;
+  box-shadow: 10px 10px 66px -8px rgba(0, 0, 0, 0.281);
+  -webkit-box-shadow: 10px 10px 66px -8px rgba(0, 0, 0, 0.308);
+  -moz-box-shadow: 10px 10px 66px -8px rgba(0, 0, 0, 0.219);
+}
+
+.branch-img:hover {
+  transform: scale(0.98);
+  cursor: pointer;
+}
+
+.popup-box {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 500;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.popup-box.open {
+  visibility: visible;
+  opacity: 1;
+}
+.popup-box .popup-content {
+  background-color: #ffffff;
+  width: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+}
+
+.popup-box .popup-header {
+  padding: 15px 40px 15px 15px;
+  border-bottom: 1px solid #dddddd;
+}
+.popup-box .popup-header h3 {
+  margin: 0;
+  color: #e91e63;
+  font-size: 20px;
+}
+.popup-box .popup-header .popup-close-icon {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  color: #555555;
+  font-size: 28px;
+  line-height: 30px;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+.popup-box .popup-body {
+  padding: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.popup-box .popup-body img {
+  width: 100%;
+  display: block;
+  margin-top: 15px;
+}
+.popup-box .popup-body p {
+  font-size: 16px;
+  color: #555555;
+  margin: 0 0 15px;
+  text-align: left;
+}
+.popup-box .popup-footer {
+  padding: 15px;
+  border-top: 1px solid #dddddd;
+  text-align: right;
+}
+.popup-box .popup-footer .btn {
+  padding: 8px 15px;
+  border: 1px solid #555555;
+  color: #555555;
+  font-size: 16px;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.popup-box .popup-footer .btn:focus {
+  outline: none;
+}
+
+/*responsive*/
+
+@media (max-width: 767px) {
+  .branches .branch-items .item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .popup-box .popup-content {
+    width: calc(100% - 30px);
+  }
+}
+
+/* vaccination section */
+.vaccine-headings {
+  text-align: left;
+  margin: 20px;
+  line-height: 1.3;
+}
+
+/* End-Section */
+
+#services-function {
+  text-align: left;
+}
+
+#services-function .container :hover {
+  transform: scale(1);
+}
+
+.px-3 {
+  margin-top: 20px;
+}

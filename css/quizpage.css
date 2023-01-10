@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+/* Navbar */
+
+body {
+  overflow-x: hidden;
+}
+
+.navbar {
+  padding: 20px;
+  border-bottom: 1px solid white;
+}
+.navbar .active {
+  border-bottom: 2px white solid;
+}
+
+.navbar li {
+  font-size: larger;
+}
+
+.bg-dark {
+  background-color: #121526 !important;
+}
+
+.navbar ul {
+  height: auto;
+}
+
+/* quiz section */
+
+.quiz {
+  text-transform: capitalize;
+}
+
+.quiz-field {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.quiz-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+  width: 500px !important;
+  overflow-x: hidden !important;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.quiz-header {
+  padding: 1rem;
+}
+h2 {
+  padding: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+ul li {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+ul li label {
+  cursor: pointer;
+}
+#submit {
+  background-color: #03cae4;
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: inherit;
+  padding: 1.3rem;
+}
+#submit :hover {
+  background-color: #04adc4;
+}
+#submit:focus {
+  outline: none;
+  background-color: #44b927;
+}
+
+/* *****responsive tags */
+@media only screen and (max-width: 600px) {
+  .quiz-container {
+    width: 350px !important;
+  }
+  .card-headings {
+    font-size: 1.6rem !important;
+  }
+}

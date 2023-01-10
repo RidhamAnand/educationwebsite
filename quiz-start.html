@@ -1,0 +1,274 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediIN+ | Self Assesment Test</title>
+    <!-- CSS Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/quizpage.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- favicon -->
+    <link rel="icon" href="favicon.ico">
+
+
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/b3f99de958.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html" style="font-weight: 700; letter-spacing: 3px;">MediIN +</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services-function">Emergency Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quiz.html">Covid-19 Self-Assessment</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        More
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="index.html#covid-symptoms">Covid-19 Symptoms</a></li>
+                        <li><a class="dropdown-item" href="index.html#covid-19">Precautionary Measures for Covid-19</a>
+                        </li>
+
+                        <li><a class="dropdown-item" href="vaccination.html">
+                                Nearest Vaccination Center </a></li>
+                        <li><a class="dropdown-item" href="index.html#immunity-section">How to Build Immunity ?</a></li>
+                        <li><a class="dropdown-item" href="index.html#immediate-steps">Immediate Steps for Covid-19
+                                +ve</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+
+    <div class="quiz-field">
+        <div class="quiz-container" id="quiz">
+            <div class="quiz-header">
+                <h2 id="question">Question Text</h2>
+                <ul>
+                    <li>
+                        <input type="radio" name="answer" id="a" class="answer" value="low">
+                        <label for="a" id="a_text">Answer</label>
+                    </li>
+
+                    <li>
+                        <input type="radio" name="answer" id="b" class="answer" value="medium">
+                        <label for="b" id="b_text">Answer</label>
+                    </li>
+
+                    <li>
+                        <input type="radio" name="answer" id="c" class="answer" value="high">
+                        <label for="c" id="c_text">Answer</label>
+                    </li>
+
+
+                </ul>
+            </div>
+
+            <button id="submit">Submit</button>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="white-section" id="footer">
+        <div class="container">
+            <i class="social-icon fab fa-facebook-f"></i>
+            <i class="social-icon fab fa-twitter"></i>
+            <i class="social-icon fab fa-instagram"></i>
+            <i class="social-icon fas fa-envelope"></i>
+            <p>Designed and Developed By Arnav & Ridham</p>
+        </div>
+    </footer>
+
+</body>
+<script>const quizData = [
+        {
+            question: "In Which Age Group Do You Reside ?",
+            a: "Under 18",
+            b: "18-45",
+            c: "45 above",
+        },
+        {
+            question: "Are You Vaccinated with All the Doses ?",
+            a: "Yes,I am Vaccinated with All the Does Which Are Available",
+            b: "No , I Have Taken a Few Doses Only",
+            c: "I Have Not Taken Any Dose Yet",
+        },
+        {
+            question: "Are You Facing Any of the Symptoms of Covid-19 ?",
+            a: "I am all good",
+            b: "Body Ache, Chest Congestion, Runny Nose, Pink Eyes, High Fever, Fatigue, Cough",
+            c: "Loss of Sense of Smell and Taste, GastroIntestinal Symptoms, Hearing Impairment, Difficulty in Breathing  ",
+        },
+        {
+            question: "Have you travelled in recent time?",
+            a: "No",
+            b: "Yes, I have recently travelled out of my state",
+            c: "Yes, I have recently travelled out of my country",
+        },
+
+        {
+            question: "Do You Have Any of the following Pre Existing Conditions",
+            a: "No, I am Good",
+            b: "Thyroid, Blood Pressure, Hypertension, Diabeties",
+            c: "Asthama, Lung Disease, Kidney Disorder, Heart Disease",
+        },
+
+
+
+    ];
+
+    const quiz = document.getElementById('quiz')
+    const answerEls = document.querySelectorAll('.answer')
+    const questionEl = document.getElementById('question')
+    const a_text = document.getElementById('a_text')
+    const b_text = document.getElementById('b_text')
+    const c_text = document.getElementById('c_text')
+    const submitBtn = document.getElementById('submit')
+
+
+    let currentQuiz = 0
+    let score = 0
+    let lowCount = 0
+    let mediumCount = 0
+    let highCount = 0
+
+    loadQuiz()
+
+    function loadQuiz() {
+
+        deselectAnswers()
+
+        const currentQuizData = quizData[currentQuiz]
+
+        questionEl.innerText = currentQuizData.question
+        a_text.innerText = currentQuizData.a
+        b_text.innerText = currentQuizData.b
+        c_text.innerText = currentQuizData.c
+    }
+
+    function deselectAnswers() {
+        answerEls.forEach(answerEl => answerEl.checked = false)
+    }
+
+    function getSelected() {
+        let answer
+        answerEls.forEach(answerEl => {
+            if (answerEl.checked) {
+                answer = answerEl.id
+            }
+        })
+        return answer
+    }
+
+
+    submitBtn.addEventListener('click', () => {
+        const answer = getSelected()
+        if (answer) {
+            if (answer === "a") {
+                lowCount++
+                console.log("low count " + lowCount)
+            }
+            else if (answer === "b") {
+                mediumCount++
+                console.log("medium count " + mediumCount)
+            }
+            else {
+                highCount++
+                console.log("high count " + highCount)
+            }
+
+            currentQuiz++
+
+            if (currentQuiz < quizData.length) {
+                console.log(answer)
+                loadQuiz()
+            } else {
+
+                // low risk cases
+
+                if (lowCount > highCount && lowCount > mediumCount) {
+                    console.log("low count " + lowCount)
+                    quiz.innerHTML = `<div style="text-align:center;padding:20px;">
+                            <h2>You are at Low Risk, Have a healthy Diet and Follow All the Precautions of COVID-19 </h2>
+                            <video src="res\\videos\\happy.mp4" muted autoplay loop style="max-width:200px"></video><br>
+
+
+                            <button type="button" class="btn btn-lg btn-success"  onclick="location.reload()"> 
+                               Assess Again </button>
+                            </div>
+                            `
+                }
+
+                else if (mediumCount > highCount && mediumCount > lowCount) {
+                    console.log("medium count " + mediumCount)
+                    quiz.innerHTML = `<div style="text-align:center;padding:20px;">
+                            <h2>You are at a Moderate Risk, It Seems You are Unwell. You Should Contact your Doctor </h2>
+                            <video src="res\\videos\\rest.mp4" muted autoplay loop style="max-width:200px"></video><br>
+
+
+                            <button type="button" class="btn btn-lg btn-success"  onclick="location.reload()"> 
+                               Assess Again </button>
+                               <a href="index.html#immediate-steps"> <p style="margin-top:30px"> Take  <b> These Steps </b> if You are Feeling Covid-19 +ve <br> <p>
+
+                            </div>
+                            `
+                }
+                else if (highCount > mediumCount && highCount > lowCount) {
+                    console.log("high count " + highCount)
+                    quiz.innerHTML = `<div style="text-align:center;padding:20px;">
+                            <h2>You are at High Risk, Consult your Doctor Immediately !</h2>
+                            <video src="res\\videos\\contact-doc.mp4" muted autoplay loop style="max-width:200px;margin-bottom:20px"></video> <br>
+
+
+                            <button type="button" class="btn btn-lg btn-success"  onclick="location.reload()"> 
+                               Assess Again </button>
+                               <a href="index.html#immediate-steps"> <p style="margin-top:30px"> Take  <b> These Steps </b> if You are Feeling Covid-19 +ve <br> <p>
+
+                            </div>
+                            `
+                }
+
+
+
+
+
+
+            }
+        }
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+
+
+</html>
